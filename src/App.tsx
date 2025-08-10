@@ -702,7 +702,7 @@ function App() {
                   className="flex items-center justify-center gap-2 px-6 py-3 font-bold hover:bg-blue-600 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
                 >
                   <Mail className="w-5 h-5" />
-                  ✉️ Aranma Talep Et
+                  Aranma Talep Et
                 </a>
                 <a
                   href="http://t.ly/golgiris"
@@ -712,7 +712,7 @@ function App() {
                   className="flex items-center justify-center gap-2 px-6 py-3 font-bold hover:bg-gray-100 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
                 >
                   <MessageSquare className="w-5 h-5" />
-                  💬 Golbet'e Dön
+                  Golbet'e Dön
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
