@@ -27,8 +27,6 @@ function App() {
   const [showOperatorDetails, setShowOperatorDetails] = useState(false);
   const [showSpamDetails, setShowSpamDetails] = useState(false);
   const [showBrowserDetails, setShowBrowserDetails] = useState(false);
-  const [showSupport, setShowSupport] = useState(false);
-  const [showSupportForm, setShowSupportForm] = useState(false);
 
   const countries = [
     { code: '+90', name: 'Türkiye', flag: '🇹🇷' },
@@ -358,14 +356,16 @@ function App() {
           {userInfoChecked && userInfoFound === false && (
             <div className="mt-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
               <p className="text-red-300 mb-4">Bilgi bulunamadı.</p>
-              <button
-                onClick={() => setShowSupportForm(true)}
+              <a
+                href="https://t.ly/golaranmatalep"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ backgroundColor: '#ffffff', color: '#071d2a', borderRadius: '8px' }}
-                className="inline-flex items-center gap-2 px-6 py-3 font-bold hover:bg-gray-100 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 font-bold hover:bg-gray-100 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                Golbet Destek
-              </button>
+                Aranma Talep Et
+              </a>
             </div>
           )}
 
@@ -654,27 +654,7 @@ function App() {
                     {/* Support Buttons for Step 5 only */}
                     {step.id === 'international' && (
                       <div className="mt-4">
-                        <div className="flex flex-col sm:flex-row gap-3">
-                          <button
-                            onClick={() => setShowSupportForm(true)}
-                            style={{ backgroundColor: '#ffffff', color: '#071d2a', borderRadius: '8px' }}
-                            className="inline-flex items-center justify-center gap-2 px-4 py-2 font-bold hover:bg-gray-100 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
-                          >
-                            <Mail className="w-5 h-5" />
-                            ✉️ Golbet Destek
-                          </button>
-                          <a
-                            href="https://t.ly/golgiris"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ backgroundColor: 'transparent', color: '#ffffff', borderRadius: '8px' }}
-                            className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-white/30 font-bold hover:bg-white/10 hover:border-white/50 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
-                          >
-                            <MessageSquare className="w-5 h-5" />
-                            💬 Canlı Destek
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        </div>
+                        {/* Support buttons removed for international step */}
                       </div>
                     )}
 
@@ -718,23 +698,25 @@ function App() {
               
               {/* Support Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <button
-                  onClick={() => setShowSupportForm(true)}
+                <a
+                  href="https://t.ly/golaranmatalep"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ backgroundColor: '#1475E1', color: '#ffffff', borderRadius: '8px' }}
                   className="flex items-center justify-center gap-2 px-6 py-3 font-bold hover:bg-blue-600 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
                 >
                   <Mail className="w-5 h-5" />
-                  ✉️ Golbet Destek
-                </button>
+                  ✉️ Aranma Talep Et
+                </a>
                 <a
-                  href="https://t.ly/golgiris"
+                  href="http://t.ly/golgiris"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ backgroundColor: '#ffffff', color: '#1475E1', borderRadius: '8px' }}
                   className="flex items-center justify-center gap-2 px-6 py-3 font-bold hover:bg-gray-100 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
                 >
                   <MessageSquare className="w-5 h-5" />
-                  💬 Canlı Destek
+                  💬 Golbet'e Dön
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
