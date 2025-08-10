@@ -240,10 +240,6 @@ function App() {
     return instructions[operator as keyof typeof instructions] || [];
   };
 
-  if (showSupportForm) {
-    return <SupportForm onBack={() => setShowSupportForm(false)} />;
-  }
-
   return (
     <div style={{ backgroundColor: '#071d2a', color: '#ffffff', fontFamily: 'Arial, sans-serif' }} className="min-h-screen p-4 sm:p-6">
       <div className="max-w-4xl mx-auto">
